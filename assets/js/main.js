@@ -4,14 +4,14 @@ const myLibrary = [
         synopsis: "A young boy discovers he's a wizard on his eleventh birthday and attends Hogwarts School of Witchcraft and Wizardry, where he uncovers the truth about his parents' mysterious death.",
         author: "J.K. Rowling",
         pages: 223,
-        read: false
+        read: true
     },
     {
         title: "The Hobbit",
         synopsis: "Bilbo Baggins, a hobbit, is swept into an epic quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug.",
         author: "J.R.R. Tolkien",
         pages: 310,
-        read: false
+        read: true
     },
     {
         title: "To Kill a Mockingbird",
@@ -39,7 +39,7 @@ const myLibrary = [
         synopsis: "In the Roaring Twenties, Nick Carraway moves to Long Island and becomes entangled in the life of his mysterious neighbor, Jay Gatsby, whose obsession with the beautiful Daisy Buchanan leads to tragedy.",
         author: "F. Scott Fitzgerald",
         pages: 180,
-        read: false
+        read: true
     }    
 ];
 
@@ -104,19 +104,24 @@ function createBooks(){
         bookElement.setAttribute("data-id", index);
         bookElement.setAttribute("data-read", book.read);
 
+        let generateImage = Math.floor(Math.random() * 3) + 1;
+
         bookElement.innerHTML = `
-                        <div class="img-container>
-                            <img src="assets/img/default.jpg" alt="${book.title} class="book-image">
+                        <div class="img-container">
+                            <img src="assets/img/default${generateImage}.jpg" alt="${book.title} class="book-image">
                         </div>
-                        <div>
+                        <div class="flow">
                             <h3 class="book-title">${book.title}</h3>
                             <p class="book-synopsis">${book.synopsis}</p>
-                            <span class="book-author">${book.author}</span>
-                            <span class="book-pages">${book.pages} pages</span>
-                            <div class="book-options">
-                                <button class="button read-book">Read</button>
-                                <button class="button remove-book">Remove</button>
+                            <div class="book-author">${book.author}</div>
+                            <div class="flex">
+                                <div class="book-status">Status : ${book.read ? 'Read' : 'Unread'}</div>                        
+                                <div class="book-pages">${book.pages} pages</div>
                             </div>
+                        </div>
+                        <div class="book-options">
+                            <button class="button read-book ${book.read ? 'unread-button' : 'read-button'}">${book.read ? 'Unread' : 'Read'}</button>
+                            <button class="button remove-button">Remove</button>
                         </div>
                     `;
 
@@ -136,7 +141,7 @@ function displayBook(){
     });
 
     readBookButton = document.querySelectorAll(".read-book");
-    removeBookButton = document.querySelectorAll(".remove-book");
+    removeBookButton = document.querySelectorAll(".remove-button");
 
 
     removeBookButton.forEach(button => {
@@ -155,13 +160,15 @@ function displayBook(){
             let bookRead = book.getAttribute("data-read");
             let bookIndex = book.getAttribute("data-id");
 
-            if(bookRead === false){
-                myLibrary[bookIndex].read = true; 
-                book.setAttribute("data-read", true);
-            } else {
+            if (bookRead == "true") {
                 myLibrary[bookIndex].read = false; 
                 book.setAttribute("data-read", false);
+            } else {
+                myLibrary[bookIndex].read = true; 
+                book.setAttribute("data-read", true);
             }
+
+            displayBook();
         });
     });
 }

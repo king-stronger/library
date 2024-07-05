@@ -5,68 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <div class="wrapper">
-            <h1 class="brand">Library</h1>
-
-            <nav class="nav">
-                <a href="" class="nav-link">Home</a>
-                <a href="" class="nav-link">Books</a>
-                <a href="" class="nav-link">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero-section">
-        <div class="wrapper grid">
-            <div class="hero-content">
-                <h2>This is the library</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis animi, iure adipisci unde consequuntur?
-                </p>
-                <button class="button">See more</button>
+    <div class="layout">
+        <header class="header">
+            <div class="wrapper flex">
+                <h1 class="brand">Library</h1>
+    
+                <nav class="nav">
+                    <a href="" class="nav-link">Home</a>
+                    <a href="" class="nav-link">Books</a>
+                    <a href="" class="nav-link">Contact</a>
+                </nav>
             </div>
-            <div class="img-container">
-                <img src="assets/css/" alt="" class="hero-img">
+        </header>
+    
+        <section class="hero-section">
+            <div class="wrapper grid">
+                <div class="hero-content flow">
+                    <h2 class="hero-title">Harry Potter and the Philosopher's Stone</h2>
+                    <p class="hero-content">
+                        A young boy discovers he's a wizard on his eleventh birthday and attends Hogwarts School of Witchcraft and Wizardry, where he uncovers the truth about his parents' mysterious death.
+                    </p>
+                    <button class="button btn-primary">See more</button>
+                </div>
+                <div class="img-container">
+                    <img src="assets/img/default2.jpg" alt="" class="hero-img">
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="services-section">
-        <div class="wrapper">
-            <div class="services">
-                <h3>Free Shipping</h3>
-                <p>Lorem ipsum dolor sit.</p>
+        </section>
+    
+        <section class="services-section">
+            <div class="wrapper flex">
+                <div class="services flow">
+                    <i class='icon bx bxs-truck'></i>
+                    <h3>Free Shipping</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+    
+                <div class="services flow">
+                    <i class='icon bx bx-lock'></i>
+                    <h3>Secure Payment</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+    
+                <div class="services flow">
+                    <i class='icon bx bx-support' ></i>
+                    <h3>Free Shipping</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
             </div>
-
-            <div class="services">
-                <h3>Free Shipping</h3>
-                <p>Lorem ipsum dolor sit.</p>
+        </section>
+    
+        <section class="library-section">
+            <div class="wrapper flow">
+                <h2>Books</h2>
+    
+                <button class="show-modal button btn-primary">Add new Book</button>
+    
+                <div class="library-box grid">
+    
+                </div>
             </div>
-
-            <div class="services">
-                <h3>Free Shipping</h3>
-                <p>Lorem ipsum dolor sit.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="library-section">
-        <div class="wrapper">
-            <h2>Books</h2>
-
-            <button class="show-modal">Add new Book</button>
-
-            <div class="library-box grid">
-
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <dialog class="modal">
-        <form action="" class="form">
+        <form action="" class="form flow">
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title">
@@ -84,7 +90,7 @@
 
             <div class="form-group">
                 <label for="pages">Pages</label>
-                <input type="text" name="pages" id="pages">
+                <input type="number" name="pages" id="pages">
             </div>
 
             <div class="form-group">
@@ -95,10 +101,9 @@
                 </select>
             </div>
 
-            <button class="add-book">Add new Book</button>
+            <button class="add-book button btn-primary">Add new Book</button>
         </form>
     </dialog>
-
     <script src="assets/js/main.js"></script>
 </body>
 </html>
