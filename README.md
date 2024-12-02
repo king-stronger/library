@@ -43,15 +43,15 @@ A simple library management system that allows users to manage books. Users can 
 library/  
 ├── assets/  
 │   ├── css/  
-│   │   └── styles.css   # Styles for the project  
+│   │   └── styles.css  
 │   ├── img/  
-│   │   └── default1.jpg # Default book images  
+│   │   └── default1.jpg  
 │   │   └── default2.jpg  
 │   │   └── default3.jpg  
 │   └── js/  
-│       └── main.js       # JavaScript for the functionality  
-├── index.html            # Main HTML file  
-└── README.md             # This file
+│       └── main.js  
+├── index.html  
+└── README.md
 
 ## License
 
