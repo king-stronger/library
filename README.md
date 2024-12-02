@@ -1,5 +1,3 @@
-
-```markdown
 # Library
 
 A simple library management system that allows users to manage books. Users can add, display, mark as read or unread, and remove books from the library.
@@ -42,7 +40,6 @@ A simple library management system that allows users to manage books. Users can 
 
 ## Folder Structure
 
-```
 library/
 ├── assets/
 │   ├── css/
@@ -55,9 +52,7 @@ library/
 │       └── main.js       # JavaScript for the functionality
 ├── index.html            # Main HTML file
 └── README.md             # This file
-```
 
 ## License
 
 This project is not licensed. If you wish to reuse or modify it, you are free to do so, but please give proper credit.
-```
