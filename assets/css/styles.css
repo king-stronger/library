@@ -64,11 +64,8 @@
     button {
         border: none;
         outline: none;
-        cursor: pointer;
-    }
-
-    input, select, textarea, button {
         font: inherit;
+        cursor: pointer;
     }
 /************************** RESET CSS **************************/
 
@@ -77,7 +74,7 @@
     .wrapper {
         padding-block: 4em;
         margin-inline: auto;
-        width: min(100% - 3em, 900px);
+        width: min(100% - 3em, 1000px);
     }
 
     .grid {
@@ -129,6 +126,11 @@
 
     .nav-link {
         color: #303F9F;
+        font-size: 1.2rem;
+    }
+
+    .nav-link:hover {
+        color: #E57373;
     }
 /************************** HEADER **************************/
 
@@ -203,6 +205,12 @@
         display: grid;
         grid-template-columns: 1fr 1.5fr;
     }
+
+    .book-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
     
     .book-title {
         font-size: var(--fs-400);
@@ -216,10 +224,6 @@
 
     .book-status {
         font-size: var(--fs-300);
-    }
-
-    .book-image {
-        aspect-ratio: 1 / 1;
     }
 
     .book-options {
@@ -247,10 +251,11 @@
 /************************** LIBRARY **************************/
 
 .modal {
+    width: 100%;
     margin: auto;
     padding: 2em;
     border: none;
-    max-width: 60ch;
+    max-width: 500px;
     border-radius: 1em;
 }
 
@@ -270,6 +275,14 @@ input, label, select, textarea {
 }
 
 input, select, textarea {
+    border: none;
+    font: inherit;
     padding: .5em;
     border-radius: .5em;
+    outline: 1px solid gray;
+    background-color: white;
+}
+
+.form-group > * + * {
+    margin-top: .5rem;
 }

@@ -110,7 +110,7 @@ function createBooks(){
                         <div class="img-container">
                             <img src="assets/img/default${generateImage}.jpg" alt="${book.title} class="book-image">
                         </div>
-                        <div class="flow">
+                        <div class="book-infos">
                             <h3 class="book-title">${book.title}</h3>
                             <p class="book-synopsis">${book.synopsis}</p>
                             <div class="book-author">${book.author}</div>
@@ -118,10 +118,10 @@ function createBooks(){
                                 <div class="book-status">Status : ${book.read ? 'Read' : 'Unread'}</div>                        
                                 <div class="book-pages">${book.pages} pages</div>
                             </div>
-                        </div>
-                        <div class="book-options">
-                            <button class="button read-book ${book.read ? 'unread-button' : 'read-button'}">${book.read ? 'Unread' : 'Read'}</button>
-                            <button class="button remove-button">Remove</button>
+                            <div class="book-options">
+                                <button class="button read-book ${book.read ? 'unread-button' : 'read-button'}">${book.read ? 'Unread' : 'Read'}</button>
+                                <button class="button remove-button">Remove</button>
+                            </div>
                         </div>
                     `;
 
